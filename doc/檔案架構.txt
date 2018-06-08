@@ -1,0 +1,150 @@
+資料夾 = action/
+    php = 對使用者操作封裝
+	      UserAction.php
+
+資料夾 = classes/
+	php = 自己寫的類別
+		  Cart.php
+		  Database.php
+		  DatabaseAccessObject.php
+		  ECPay.Payment.integration.php
+		  Ip.php
+		  Log.php
+		  Mail.php
+		  Order.php
+		  Password.php
+		  Request.php
+		  Router.php
+		  Sms.php
+		  
+資料夾 = controller/
+    php = 表單邏輯、頁面邏輯
+		  cart.php
+	      do_activate.php
+		  do_addtocart.php
+		  do_checkout.php
+		  do_checkreset.php
+		  do_delcart.php
+		  do_forget.php
+		  do_login.php
+		  do_logout.php
+		  do_product.php
+		  do_register.php
+		  do_reset.php
+		  do_updatecart.php
+		  ecpay-callback.php
+		  fail.php
+		  forget.php
+		  index.php
+		  login.php
+		  memberoder.php
+		  product.php
+		  register.php
+		  reset.php
+		  thankyou.php
+		  
+資料夾 = css/
+	css = 樣式表
+		  bootstrap.min.css
+		  font-awesome.min.css
+		  myself.css (客製化)
+		  SweetAlert2
+	
+資料夾 = error/
+	php = 網頁錯誤時要顯示的頁面
+		  403.php
+		  
+資料夾 = fonts/
+	圖標字型 fontawesome
+	         glyphicons
+		
+	
+資料夾 = images/
+    資料夾 = article/ 
+	         文章用圖片
+    資料夾 = carousel/
+	 	     輪播用圖片
+	資料夾 = product/
+	         產品用圖片
+			 
+    logo.jpg
+	backToTop.jpg
+		  
+資料夾 = js/
+	js = javascript
+		 jquery.min.js    (版本 3.2.1)
+		 popper.min.js    (版本 1.11.0)
+		 bootstrap.min.js (版本 4.0.0)
+		 SweetAlert2
+	
+資料夾 = libs/
+	資料夾 = 他人函式庫 A
+	資料夾 = 他人函式庫 B
+	php = 自己寫的函式庫
+		  fun_all.php
+	      my_console.php
+		  my_date_mutator.php
+		  my_string_mutator.php
+
+資料夾 = log/
+	log = 記錄檔
+		  error.log
+		  info.log
+		  warning.log
+		  
+資料夾 = sql/
+	sql = 資料庫建立表格及基本資料
+	      example.sql (MySQL)
+
+資料夾 = validators/
+    php = 驗證資料
+	      OrderVeridator.php
+		  PostVeridator.php
+		  UserVeridator.php
+		  
+資料夾 = vendor/
+	composer 產生的
+	
+資料夾 = view/
+	資料夾 = body
+		php = html body 部份，每頁不一樣的地方
+			  cart.php
+			  fail.php
+			  forget.php
+			  index.php
+			  login.php
+			  memberorder.php
+			  product.php
+			  register.php
+			  reset.php
+			  thankyou.php
+	資料夾 = footer
+		php = 表尾 (html body 上面，可以不用每個 html 都寫一次)
+		      footer.php
+	資料夾 = header
+		php = 表頭 (html body 下面，可以不用每個 html 都寫一次)
+		      header.php
+			  header_menu.php (導覽列=MENU)
+			  header_img.php  (輪播)
+
+.env
+	環境變數 (git 時不要上傳此檔，機密)
+	
+.htaccess
+	重寫路徑
+	
+composer.json
+	套件管理
+
+composer.lock
+	套件管理
+	
+index.php
+	主頁
+	
+ini.php
+	引入檔、變數設定
+	
+route.php
+	// 搭配 class Router, class Request 
+	// 搭配 .htaccess 排除資料夾名稱後解析 URL

@@ -1,0 +1,35 @@
+{
+    "name": "blue/example_db",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Bule",
+            "email": "blue.workuse@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "monolog/monolog": "^1.23",
+        "recca0120/laravel-tracy": "^1.8",
+        "vlucas/phpdotenv": "^2.4",
+        "nesbot/carbon": "^1.27",
+        "wixel/gump": "^1.5",
+        "phpmailer/phpmailer": "^6.0",
+        "plasticbrain/php-flash-messages": "^1.0",
+        "fightbulc/moment": "^1.26",
+        "facebook/graph-sdk": "^5.6"
+
+    },
+    "autoload": {
+        "classmap": [
+            "action",
+            "classes",
+            "libs",
+            "validators"
+        ],
+        "files": [
+            "libs/fun_all.php"
+        ]
+    }
+}

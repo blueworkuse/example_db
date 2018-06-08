@@ -1,0 +1,296 @@
+
+/* 全域樣式
+-------------------------------------------------- */
+
+/* 確定 padding 和 border 已經包含在元素寬度和高度內 */
+* {             
+	box-sizing:border-box;
+}
+
+body {
+	padding-top: 4rem;
+	padding-bottom: 1rem;
+	color: #000000;
+}
+
+html {
+    font-size: 20px;
+} 
+
+
+
+/* 響應式 CSS
+-------------------------------------------------- */
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (min-width: 959px) {
+    .carousel-item {
+		height: 35rem;
+	}
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .carousel-item {
+		height: 35rem;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    .carousel-item {
+		height: 35rem;
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .carousel-item {
+		height: 14rem;
+	}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    .carousel-item {
+		height: 14rem;
+	}
+}
+
+
+@media (min-width: 40em) {
+	/* Bump up size of carousel content */
+	.carousel-caption p {
+		margin-bottom: 1.25rem;
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+
+	.featurette-heading {
+		font-size: 50px;
+	}
+}
+
+@media (min-width: 62em) {
+	.featurette-heading {
+		margin-top: 7rem;
+	}
+}
+
+
+
+/* 其它
+-------------------------------------------------- */
+/* 邊框 */
+.borderShadow {
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+/* logo 圖片 */
+.logo-img {
+	border-radius: 8px;
+
+	height: auto;
+	max-width: 100%;
+}
+
+/* div裡面的圖片自動放到最大 */
+.div-img-max {
+	border-radius: 8px;
+
+	height: auto;
+	max-width: 100%;
+}
+
+/* h2標題 */
+.my-h2-title {
+	color:green;
+	background-color: #B4DF5B;
+
+	border-radius: 8px;
+}
+
+
+/* 水平線
+------------------------- */
+.featurette-divider {
+	// Space out the Bootstrap <hr> more 
+	margin: 5rem 0; 
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -.05rem;
+}
+
+
+
+
+/* 輪播
+-------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+	margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+	bottom: 1.5rem;
+	z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+	background-color: #777;
+}
+.carousel-item > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* 麵包屑
+------------------------- */
+.breadcrumb {
+	background-color:#FFE4E1;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}
+
+.breadcrumb-item > a {
+	text-decoration:none;
+	color:#000000;
+}
+.breadcrumb-item > a:link {
+	/* 設定還沒有瀏覽過的連結 */
+	color:#000000;
+}
+.breadcrumb-item > a:hover {
+	/* 設定滑鼠移經的連結 */
+	text-decoration:underline;
+	color:red;
+}
+
+
+/* 購物車數量欄位按鈕
+------------------------- */
+.quantity {
+    float: left;
+    margin-right: 15px;
+    background-color: #eee;
+    position: relative;
+    width: 80px;
+    overflow: hidden
+}
+.quantity input {
+    margin: 0;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    float: right;
+    color: #000;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+    background-color: #F6F6F6
+}
+.quantity input.qty {
+    position: relative;
+    border: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 0;
+    background-clip: padding-box
+}
+
+.shopping-cart {
+    margin-top: 20px;
+}
+
+
+
+/* 回頂端
+-------------------------*/
+.back-to-top-img {
+	border-radius:50%;
+
+	height: auto;
+	max-width: 100%;
+
+    display:none;
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(255, 114, 86, 0.50);
+    font-size: 12px;
+    padding: 1em;
+
+    opacity:0.5;
+    /* 針對 IE8 以及更早的版本 */
+	filter:alpha(opacity=50); 
+}
+
+.back-to-top-img:hover {    
+    background-color: rgba(255, 114, 86, 0.80);
+    text-decoration:none;
+    color:#ffffff;
+
+    opacity:1;
+    /* 針對 IE8 以及更早的版本 */
+	filter:alpha(opacity=100);
+}
+
+
+/* 頁尾
+------------------------- */
+.fa-facebook {
+    color:#3b5998;
+}
+.fa-linkedin {
+    color:#0077B5;
+}
+.fa-twitter {
+    color:#4099FF;
+}
+.fa-google {
+    color:#d34836;
+}
+
+.bg-primary {
+	background-color: #000 !important;
+}
+
+.bg-circle-outline {
+	width: 60px;
+	height: 60px;
+	color:smoke;
+	padding: 8px 0px;
+	border: 2px solid;
+	border-color: smoke;
+	border-radius: 50%;
+}
+
+.bg-circle-outline a, a:hover, .media a:focus {
+	text-decoration: none !important;
+	outline: none;
+	color: #ececec;
+}
+
+.footer {
+	color:white;
+}
+.footer a {
+	color:#FFFF00;
+}
